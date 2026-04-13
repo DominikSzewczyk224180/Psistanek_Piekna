@@ -317,13 +317,25 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     background: var(--blush-50);
 }
 
+/* Paw pattern background — tiled, faded */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../img/paw-pattern.png') repeat center/400px;
+    opacity: 0.06;
+    z-index: 0;
+    pointer-events: none;
+}
+
 .hero__bg {
     position: absolute;
     inset: 0;
+    z-index: 1;
     background:
-        radial-gradient(ellipse 80% 60% at 20% 10%, rgba(255,214,224,0.5) 0%, transparent 60%),
+        radial-gradient(ellipse 80% 60% at 20% 10%, rgba(255,214,224,0.55) 0%, transparent 60%),
         radial-gradient(ellipse 70% 50% at 80% 80%, rgba(196,162,101,0.12) 0%, transparent 50%),
-        radial-gradient(ellipse 60% 80% at 50% 50%, rgba(255,179,198,0.2) 0%, transparent 60%);
+        radial-gradient(ellipse 90% 90% at 50% 50%, rgba(253,248,245,0.6) 0%, transparent 70%);
     animation: heroGradient 12s ease-in-out infinite alternate;
 }
 
@@ -337,6 +349,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     inset: 0;
     pointer-events: none;
     overflow: hidden;
+    z-index: 1;
 }
 
 .paw-particle {
@@ -349,8 +362,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 @keyframes pawFloat {
     0% { opacity: 0; transform: translateY(100vh) rotate(0deg) scale(0.5); }
-    10% { opacity: 0.2; }
-    90% { opacity: 0.2; }
+    10% { opacity: 0.15; }
+    90% { opacity: 0.15; }
     100% { opacity: 0; transform: translateY(-10vh) rotate(360deg) scale(1); }
 }
 
@@ -363,18 +376,18 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     text-align: center;
     position: relative;
     z-index: 2;
-    padding: 90px 24px 20px;
+    padding: 90px 24px 16px;
 }
 
 .hero__content {
-    max-width: 800px;
+    max-width: 900px;
 }
 
 .hero__logo {
-    width: clamp(240px, 32vw, 400px);
+    width: clamp(320px, 42vw, 520px);
     height: auto;
-    margin: 0 auto 20px;
-    filter: drop-shadow(0 6px 30px rgba(46,34,38,0.1));
+    margin: 0 auto 16px;
+    filter: drop-shadow(0 8px 40px rgba(46,34,38,0.12));
     animation: heroLogoIn 1s var(--ease) both;
 }
 
@@ -385,13 +398,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .hero__subtitle {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.15rem, 2.5vw, 1.7rem);
-    font-weight: 500;
+    font-size: clamp(1.3rem, 3vw, 2.2rem);
+    font-weight: 700;
     font-style: italic;
-    color: var(--charcoal-soft);
-    letter-spacing: 2.5px;
+    color: var(--charcoal);
+    letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
     animation: fadeUp 0.8s var(--ease) 0.3s both;
 }
 
@@ -853,86 +866,53 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     background: var(--ivory);
 }
 
-.news__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+/* Facebook Page Plugin wrapper */
+.fb-embed-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.news-card {
-    background: #fff;
+.fb-embed-wrap .fb-page {
     border-radius: var(--r-lg);
     overflow: hidden;
+    box-shadow: var(--sh-md);
+}
+
+/* Fallback blockquote before FB SDK loads */
+.fb-embed-wrap blockquote {
+    background: #fff;
+    border-radius: var(--r-lg);
+    padding: 40px;
+    text-align: center;
     box-shadow: var(--sh-sm);
-    transition: all var(--dur) var(--ease);
     border: 1px solid var(--cream-dark);
+    min-width: 320px;
 }
 
-.news-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--sh-lg);
-}
-
-.news-card__img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    transition: transform 0.6s var(--ease);
-}
-
-.news-card:hover .news-card__img {
-    transform: scale(1.05);
-}
-
-.news-card__img-wrap {
-    overflow: hidden;
-    position: relative;
-}
-
-.news-card__body {
-    padding: 26px;
-}
-
-.news-card__meta {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 12px;
-}
-
-.news-card__badge {
-    background: #1877F2;
-    color: #fff;
-    padding: 3px 12px;
-    border-radius: var(--r-full);
-    font-size: 0.7rem;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
-.news-card__date {
-    font-size: 0.78rem;
-    color: var(--charcoal-soft);
-}
-
-.news-card__title {
+.fb-embed-wrap blockquote a {
+    color: #1877F2;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     font-weight: 700;
-    line-height: 1.35;
-    margin-bottom: 8px;
-}
-
-.news-card__text {
-    font-size: 0.88rem;
-    color: var(--charcoal-soft);
-    line-height: 1.65;
 }
 
 .news__cta {
     text-align: center;
     margin-top: 48px;
+}
+
+/* ===== SVG ICON COLORING (pink palette) ===== */
+.feature__icon svg,
+.service-card__icon svg,
+.contact-row__icon svg {
+    stroke: var(--accent);
+    color: var(--accent);
+}
+
+.contact-row__icon svg[fill="currentColor"] {
+    fill: var(--accent);
+    stroke: none;
 }
 
 
@@ -1325,7 +1305,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
     .about__grid { grid-template-columns: 1fr; gap: 48px; }
     .contact__grid { grid-template-columns: 1fr; }
-    .news__grid { grid-template-columns: 1fr; }
     .gallery__grid { grid-template-columns: repeat(3, 1fr); }
 
     .photo-strip__item {
@@ -1338,7 +1317,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     .section { padding: 80px 16px; }
 
     .hero__top { padding: 80px 16px 16px; }
-    .hero__logo { width: 200px; }
+    .hero__logo { width: 260px; }
+    .hero__subtitle { font-size: 1.1rem; }
 
     .services__grid { grid-template-columns: 1fr; }
     .gallery__grid { grid-template-columns: repeat(2, 1fr); }
