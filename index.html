@@ -63,102 +63,89 @@
         <div class="hero__bg"></div>
         <div class="hero__particles" id="particles"></div>
 
-        <div class="hero__content">
-            <img src="img/logo.png" alt="Psistanek Piękna — Salon dla Psów" class="hero__logo">
+        <div class="hero__top">
+            <div class="hero__content">
+                <img src="img/logo.png" alt="Psistanek Piękna — Salon dla Psów" class="hero__logo">
 
-            <div class="hero__ornament">
-                <span class="hero__ornament-line"></span>
-                <span class="hero__ornament-dot"></span>
-                <span class="hero__ornament-line"></span>
-            </div>
+                <p class="hero__subtitle">Profesjonalny salon groomerski w Pszowie</p>
 
-            <p class="hero__subtitle">Salon dla Psów — Pszów</p>
-
-            <p class="hero__desc">
-                Profesjonalna pielęgnacja i strzyżenie Twojego pupila w miłej, domowej atmosferze
-            </p>
-
-            <div class="hero__actions">
-                <a href="tel:+48889712330" class="btn btn--primary">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                    Zadzwoń teraz
-                </a>
-                <a href="#uslugi" class="btn btn--outline">
-                    Nasze usługi
-                </a>
+                <div class="hero__actions">
+                    <a href="tel:+48889712330" class="btn btn--primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        Zadzwoń teraz
+                    </a>
+                    <a href="#uslugi" class="btn btn--outline">
+                        Nasze usługi
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="hero__scroll-hint">
-            <div class="scroll-mouse">
-                <div class="scroll-mouse__dot"></div>
+        <!-- PHOTO STRIP integrated into hero -->
+        <div class="hero__strip">
+            <div class="photo-strip">
+                <div class="photo-strip__track" id="photoStrip">
+                    <div class="photo-strip__item">
+                        <img src="img/dog-husky.png" alt="Husky po grooming">
+                        <span class="photo-strip__label">Husky</span>
+                    </div>
+                    <div class="photo-strip__item">
+                        <img src="img/dog-maltese.png" alt="Maltańczyk">
+                        <span class="photo-strip__label">Maltańczyk</span>
+                    </div>
+                    <div class="photo-strip__item">
+                        <img src="img/dog-chihuahua.png" alt="Chihuahua">
+                        <span class="photo-strip__label">Chihuahua</span>
+                    </div>
+                    <div class="photo-strip__item">
+                        <img src="img/dog-pomeranian.png" alt="Pomeranian">
+                        <span class="photo-strip__label">Pomeranian</span>
+                    </div>
+                    <div class="photo-strip__item">
+                        <img src="img/dog-poodle.png" alt="Pudel">
+                        <span class="photo-strip__label">Pudel</span>
+                    </div>
+                    <div class="photo-strip__item">
+                        <img src="img/dog-shihtzu.png" alt="Shih Tzu">
+                        <span class="photo-strip__label">Shih Tzu</span>
+                    </div>
+                    <div class="photo-strip__item">
+                        <img src="img/dog-spitz.png" alt="Szpic">
+                        <span class="photo-strip__label">Szpic</span>
+                    </div>
+                    <!-- Duplicated for seamless infinite scroll -->
+                    <div class="photo-strip__item">
+                        <img src="img/dog-husky.png" alt="Husky po grooming">
+                        <span class="photo-strip__label">Husky</span>
+                    </div>
+                    <div class="photo-strip__item">
+                        <img src="img/dog-maltese.png" alt="Maltańczyk">
+                        <span class="photo-strip__label">Maltańczyk</span>
+                    </div>
+                    <div class="photo-strip__item">
+                        <img src="img/dog-chihuahua.png" alt="Chihuahua">
+                        <span class="photo-strip__label">Chihuahua</span>
+                    </div>
+                    <div class="photo-strip__item">
+                        <img src="img/dog-pomeranian.png" alt="Pomeranian">
+                        <span class="photo-strip__label">Pomeranian</span>
+                    </div>
+                    <div class="photo-strip__item">
+                        <img src="img/dog-poodle.png" alt="Pudel">
+                        <span class="photo-strip__label">Pudel</span>
+                    </div>
+                    <div class="photo-strip__item">
+                        <img src="img/dog-shihtzu.png" alt="Shih Tzu">
+                        <span class="photo-strip__label">Shih Tzu</span>
+                    </div>
+                    <div class="photo-strip__item">
+                        <img src="img/dog-spitz.png" alt="Szpic">
+                        <span class="photo-strip__label">Szpic</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-
-    <!-- ====== PHOTO STRIP ====== -->
-    <div class="photo-strip">
-        <div class="photo-strip__track" id="photoStrip">
-            <div class="photo-strip__item">
-                <img src="img/dog-husky.png" alt="Husky po grooming" loading="lazy">
-                <span class="photo-strip__label">Husky</span>
-            </div>
-            <div class="photo-strip__item">
-                <img src="img/dog-maltese.png" alt="Maltańczyk" loading="lazy">
-                <span class="photo-strip__label">Maltańczyk</span>
-            </div>
-            <div class="photo-strip__item">
-                <img src="img/dog-chihuahua.png" alt="Chihuahua" loading="lazy">
-                <span class="photo-strip__label">Chihuahua</span>
-            </div>
-            <div class="photo-strip__item">
-                <img src="img/dog-pomeranian.png" alt="Pomeranian" loading="lazy">
-                <span class="photo-strip__label">Pomeranian</span>
-            </div>
-            <div class="photo-strip__item">
-                <img src="img/dog-poodle.png" alt="Pudel" loading="lazy">
-                <span class="photo-strip__label">Pudel</span>
-            </div>
-            <div class="photo-strip__item">
-                <img src="img/dog-shihtzu.png" alt="Shih Tzu" loading="lazy">
-                <span class="photo-strip__label">Shih Tzu</span>
-            </div>
-            <div class="photo-strip__item">
-                <img src="img/dog-spitz.png" alt="Szpic" loading="lazy">
-                <span class="photo-strip__label">Szpic</span>
-            </div>
-            <!-- Duplicated for seamless infinite scroll -->
-            <div class="photo-strip__item">
-                <img src="img/dog-husky.png" alt="Husky po grooming" loading="lazy">
-                <span class="photo-strip__label">Husky</span>
-            </div>
-            <div class="photo-strip__item">
-                <img src="img/dog-maltese.png" alt="Maltańczyk" loading="lazy">
-                <span class="photo-strip__label">Maltańczyk</span>
-            </div>
-            <div class="photo-strip__item">
-                <img src="img/dog-chihuahua.png" alt="Chihuahua" loading="lazy">
-                <span class="photo-strip__label">Chihuahua</span>
-            </div>
-            <div class="photo-strip__item">
-                <img src="img/dog-pomeranian.png" alt="Pomeranian" loading="lazy">
-                <span class="photo-strip__label">Pomeranian</span>
-            </div>
-            <div class="photo-strip__item">
-                <img src="img/dog-poodle.png" alt="Pudel" loading="lazy">
-                <span class="photo-strip__label">Pudel</span>
-            </div>
-            <div class="photo-strip__item">
-                <img src="img/dog-shihtzu.png" alt="Shih Tzu" loading="lazy">
-                <span class="photo-strip__label">Shih Tzu</span>
-            </div>
-            <div class="photo-strip__item">
-                <img src="img/dog-spitz.png" alt="Szpic" loading="lazy">
-                <span class="photo-strip__label">Szpic</span>
-            </div>
-        </div>
-    </div>
 
 
     <!-- ====== O NAS ====== -->
