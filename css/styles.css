@@ -430,6 +430,93 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 
+/* ===== BUTTONS ===== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 36px;
+    border-radius: var(--r-full);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.4px;
+    transition: all var(--dur) var(--ease);
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+.btn svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.btn--primary {
+    background: linear-gradient(135deg, var(--accent), var(--blush-700));
+    color: #fff;
+    box-shadow: 0 6px 28px rgba(224,107,138,0.35);
+    font-size: 1.05rem;
+    padding: 18px 40px;
+}
+
+.btn--primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(224,107,138,0.45);
+    filter: brightness(1.05);
+}
+
+.btn--outline {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    color: var(--charcoal);
+    border: 2.5px solid var(--blush-300);
+    font-size: 1.05rem;
+    padding: 16px 38px;
+}
+
+.btn--outline:hover {
+    background: var(--blush-100);
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(224,107,138,0.15);
+}
+
+.btn--white {
+    background: #fff;
+    color: var(--accent);
+    box-shadow: var(--sh-md);
+    font-size: 1rem;
+}
+
+.btn--white:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sh-lg);
+}
+
+.btn--facebook {
+    background: linear-gradient(135deg, #1877F2, #0d65d9);
+    color: #fff;
+    box-shadow: 0 6px 24px rgba(24,119,242,0.3);
+}
+
+.btn--facebook:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 36px rgba(24,119,242,0.4);
+    filter: brightness(1.05);
+}
+
+.btn--facebook svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    flex-shrink: 0;
+}
+
+
 /* ===== PHOTO STRIP ===== */
 .photo-strip {
     position: relative;
